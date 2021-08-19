@@ -1,0 +1,51 @@
+.toggleContainer {
+  @apply inline-flex items-center text-gray-500 align-middle;
+
+  &.horz {
+    @apply flex-row space-x-2;
+
+    &.reverse {
+      @apply flex-row-reverse space-x-reverse;
+    }
+  }
+
+  &.vert {
+    @apply flex-col space-y-2;
+
+    &.reverse {
+      @apply flex-col-reverse space-y-reverse;
+    }
+  }
+
+  .toggle {
+    @apply inline-flex;
+
+    input {
+      @apply hidden;
+    }
+
+    svg {
+      @apply w-5 h-5 fill-current;
+    }
+
+    input + .toggleOff {
+      @apply inline-flex;
+    }
+
+    input + .toggleOff + .toggleOn {
+      @apply hidden;
+    }
+
+    input:checked + .toggleOff {
+      @apply hidden;
+    }
+
+    input:checked + .toggleOff + .toggleOn {
+      @apply inline-block;
+    }
+  }
+
+  .label {
+    @apply inline-flex leading-none text-sm;
+  }
+}
