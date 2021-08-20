@@ -18,30 +18,32 @@
   }
 
   .toggle {
-    @apply inline-flex;
+    @apply relative inline-flex w-5 h-5;
 
     input {
       @apply hidden;
     }
 
-    svg {
-      @apply w-5 h-5 fill-current;
+    .toggleOff, .toggleOn {
+      @apply absolute top-0 left-0 w-5 h-5 fill-current;
     }
 
     input + .toggleOff {
-      @apply inline-flex;
+      @apply opacity-100;
+      transition: opacity 0.2s ease-in-out;
     }
 
     input + .toggleOff + .toggleOn {
-      @apply hidden;
+      @apply opacity-0;
+      transition: opacity 0.2s ease-in-out;
     }
 
     input:checked + .toggleOff {
-      @apply hidden;
+      @apply opacity-0;
     }
 
     input:checked + .toggleOff + .toggleOn {
-      @apply inline-block;
+      @apply opacity-100;
     }
   }
 

@@ -5,14 +5,15 @@ import {ReactComponent as RadioOn} from "./radio_on.svg";
 import {ReactComponent as RadioOff} from "./radio_off.svg";
 import BaseToggle from "../BaseToggle/Toggle";
 
-const Radio = props => (
+const Radio = React.forwardRef((props, ref) => (
   <BaseToggle
     {...props}
+    ref={ref}
     type="radio"
     toggleOn={RadioOn}
     toggleOff={RadioOff}
   />
-);
+));
 
 Radio.displayName = "Radio";
 

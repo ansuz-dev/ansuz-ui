@@ -1,0 +1,17 @@
+.tooltipContainer {
+  @apply absolute w-max max-w-xs;
+
+  .tooltip {
+    @apply relative px-2 py-1 bg-gray-700 text-white text-sm text-center;
+    @apply transform-gpu -translate-x-1/2;
+
+    &:before {
+      @apply absolute w-0 h-0 -top-1;
+      content: "";
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: 5px solid rgba(55, 65, 81, var(--tw-bg-opacity));
+      left: calc(50% - 5px);
+    }
+  }
+}

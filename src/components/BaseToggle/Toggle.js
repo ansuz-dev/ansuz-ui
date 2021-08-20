@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/mouse-events-have-key-events */
 /* eslint-disable react/forbid-prop-types */
 import React, {useMemo} from "react";
 import PropTypes from "prop-types";
@@ -15,6 +16,8 @@ const BaseToggle = React.forwardRef((props, ref) => {
     direction,
     toggleOn: ToggleOn,
     toggleOff: ToggleOff,
+    onMouseOver,
+    onMouseLeave,
     ...rest
   } = props;
 
@@ -35,7 +38,12 @@ const BaseToggle = React.forwardRef((props, ref) => {
   });
 
   return (
-    <label htmlFor={id} className={containerClasses}>
+    <label
+      htmlFor={id}
+      className={containerClasses}
+      onMouseOver={onMouseOver}
+      onMouseLeave={onMouseLeave}
+    >
       <div className={inputClasses}>
         <input {...rest} id={id} ref={ref} />
         <ToggleOff className="toggleOff" />
@@ -60,6 +68,8 @@ BaseToggle.defaultProps = {
   size: "md",
   direction: "horz",
   label: null,
+  onMouseOver: undefined,
+  onMouseLeave: undefined,
 };
 
 BaseToggle.propTypes = {
@@ -70,6 +80,8 @@ BaseToggle.propTypes = {
   label: PropTypes.string,
   toggleOn: PropTypes.any.isRequired,
   toggleOff: PropTypes.any.isRequired,
+  onMouseOver: PropTypes.func,
+  onMouseLeave: PropTypes.func,
 };
 
 export default BaseToggle;

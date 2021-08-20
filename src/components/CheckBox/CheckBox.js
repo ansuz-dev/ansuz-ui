@@ -5,14 +5,15 @@ import {ReactComponent as CheckboxOn} from "./checkbox_on.svg";
 import {ReactComponent as CheckboxOff} from "./checkbox_off.svg";
 import BaseToggle from "../BaseToggle/Toggle";
 
-const Checkbox = props => (
+const Checkbox = React.forwardRef((props, ref) => (
   <BaseToggle
     {...props}
+    ref={ref}
     type="checkbox"
     toggleOn={CheckboxOn}
     toggleOff={CheckboxOff}
   />
-);
+));
 
 Checkbox.displayName = "Checkbox";
 

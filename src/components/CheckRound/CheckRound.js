@@ -5,14 +5,15 @@ import {ReactComponent as CheckRoundOn} from "./checkround_on.svg";
 import {ReactComponent as CheckRoundOff} from "./checkround_off.svg";
 import BaseToggle from "../BaseToggle/Toggle";
 
-const CheckRound = props => (
+const CheckRound = React.forwardRef((props, ref) => (
   <BaseToggle
     {...props}
+    ref={ref}
     type="checkbox"
     toggleOn={CheckRoundOn}
     toggleOff={CheckRoundOff}
   />
-);
+));
 
 CheckRound.displayName = "CheckRound";
 

@@ -26,7 +26,7 @@ module.exports = {
     //  Common
     semi: ["error", "always"],
     quotes: ["error", "double"],
-    "no-console": ["error", {allow: ["warn", "error"]}],
+    "no-console": ["warn", {allow: ["warn", "error"]}],
     "no-extra-parens": ["error", "all", {
       conditionalAssign: false,
       returnAssign: false,
@@ -64,6 +64,7 @@ module.exports = {
       optionalDependencies: false,
       peerDependencies: false,
     }],
+    "no-unused-vars": "warn",
 
     //  React
     "react-hooks/rules-of-hooks": "error",
