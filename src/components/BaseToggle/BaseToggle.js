@@ -4,7 +4,7 @@ import React, {useMemo} from "react";
 import PropTypes from "prop-types";
 import cls from "classnames";
 
-import "./Toggle.scss";
+import "./BaseToggle.scss";
 
 const BaseToggle = React.forwardRef((props, ref) => {
   const id = useMemo(() => `tgl_${Math.random().toString().replace(/0\./, "")}`, []);

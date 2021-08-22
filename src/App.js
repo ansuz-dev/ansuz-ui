@@ -7,6 +7,9 @@ import Toggle from "./components/Toggle/Toggle";
 import StarToggle from "./components/StarToggle/StarToggle";
 import Tooltip from "./components/Tooltip/Tooltip";
 
+import Button from "./components/Button/Button";
+import Loading from "./components/Loading/Loading";
+
 function App() {
   return (
     <div className="container mx-auto py-8 space-y-6">
@@ -95,7 +98,6 @@ function App() {
         </Tooltip>
       </div>
       <div className="space-x-4">
-
         <Tooltip
           title="It is a long established fact that a reader."
         >
@@ -111,6 +113,42 @@ function App() {
         >
           <span>Hover me long</span>
         </Tooltip>
+      </div>
+      <div className="space-x-4">
+        <Button>
+          Click me
+        </Button>
+        <Button variant="outlined">
+          Click me
+        </Button>
+        <Button color="secondary">
+          Click me
+        </Button>
+        <Button color="secondary" variant="outlined">
+          Click me
+        </Button>
+      </div>
+
+      <div className="space-x-4">
+        <Button loading>
+          Click me
+        </Button>
+        <Button loading variant="outlined">
+          Click me
+        </Button>
+        <Button loading color="secondary">
+          Click me
+        </Button>
+        <Tooltip title="A button">
+          <Button loading color="secondary" variant="outlined">
+            Click me
+          </Button>
+        </Tooltip>
+      </div>
+
+      <div className="space-x-4">
+        <Loading />
+        <Loading color="secondary" />
       </div>
     </div>
   );

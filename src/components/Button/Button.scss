@@ -1,0 +1,44 @@
+.button {
+  @apply relative font-medium px-4 rounded-sm;
+
+  &.sm {
+    @apply h-8 text-xs;
+  }
+
+  &.md {
+    @apply h-8 text-sm;
+  }
+
+  &.lg {
+    @apply h-12 text-sm;
+  }
+
+  &.disabled {
+  }
+
+  &.filled {
+    &.primary {
+      @apply text-white bg-primary;
+    }
+
+    &.secondary {
+      @apply text-white bg-secondary;
+    }
+  }
+
+  &.outlined {
+    @apply border;
+
+    &.primary {
+      @apply bg-white #{!important};
+      @apply border-primary;
+      @apply text-primary;
+    }
+
+    &.secondary {
+      @apply bg-white #{!important};
+      @apply border-secondary;
+      @apply text-secondary;
+    }
+  }
+}

@@ -1,32 +1,32 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import {ReactComponent as CheckboxOn} from "./checkbox_on.svg";
-import {ReactComponent as CheckboxOff} from "./checkbox_off.svg";
-import BaseToggle from "../BaseToggle/Toggle";
+import {ReactComponent as CheckBoxOn} from "./checkbox_on.svg";
+import {ReactComponent as CheckBoxOff} from "./checkbox_off.svg";
+import BaseToggle from "../BaseToggle/BaseToggle";
 
-const Checkbox = React.forwardRef((props, ref) => (
+const CheckBox = React.forwardRef((props, ref) => (
   <BaseToggle
     {...props}
     ref={ref}
     type="checkbox"
-    toggleOn={CheckboxOn}
-    toggleOff={CheckboxOff}
+    toggleOn={CheckBoxOn}
+    toggleOff={CheckBoxOff}
   />
 ));
 
-Checkbox.displayName = "Checkbox";
+CheckBox.displayName = "Checkbox";
 
-Checkbox.defaultProps = {
+CheckBox.defaultProps = {
   fullwidth: false,
   size: "md",
   label: null,
 };
 
-Checkbox.propTypes = {
+CheckBox.propTypes = {
   fullwidth: PropTypes.bool,
   size: PropTypes.oneOf(["sm", "md", "lg"]),
   label: PropTypes.string,
 };
 
-export default Checkbox;
+export default CheckBox;

@@ -1,5 +1,5 @@
 .toggleContainer {
-  @apply inline-flex items-center text-gray-500 align-middle;
+  @apply inline-flex items-center text-primary align-middle;
 
   &.horz {
     @apply flex-row space-x-2;

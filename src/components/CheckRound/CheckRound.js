@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import {ReactComponent as CheckRoundOn} from "./checkround_on.svg";
 import {ReactComponent as CheckRoundOff} from "./checkround_off.svg";
-import BaseToggle from "../BaseToggle/Toggle";
+import BaseToggle from "../BaseToggle/BaseToggle";
 
 const CheckRound = React.forwardRef((props, ref) => (
   <BaseToggle

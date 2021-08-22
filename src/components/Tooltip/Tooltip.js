@@ -22,7 +22,7 @@ const Tooltip = React.forwardRef(({title, children}, ref) => {
     setIsShown(true);
 
     setPosition({
-      top: evt.currentTarget.offsetTop + evt.currentTarget.offsetHeight + 4,
+      top: evt.currentTarget.offsetTop + evt.currentTarget.offsetHeight + 8,
       left: evt.currentTarget.offsetLeft + (evt.currentTarget.offsetWidth / 2),
     });
   }, []);
@@ -42,7 +42,7 @@ const Tooltip = React.forwardRef(({title, children}, ref) => {
     <>
       {React.cloneElement(children, childrenProps)}
       {
-        isShown && (
+        (isShown && title) && (
           <Portal>
             <div className="tooltipContainer" style={position}>
               <div className="tooltip">

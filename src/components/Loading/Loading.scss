@@ -1,0 +1,47 @@
+@keyframes scaleInOut {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.loadingContainer {
+  @apply inline-block space-x-1;
+
+  &.primary {
+    .loadingItem {
+      @apply bg-primary;
+    }
+  }
+
+  &.secondary {
+    .loadingItem {
+      @apply bg-secondary;
+    }
+  }
+
+  &.white {
+    .loadingItem {
+      @apply bg-white;
+    }
+  }
+}
+
+.loadingItem {
+  @apply inline-block w-1 h-1 rounded-full;
+  animation-name: scaleInOut;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+  &.delay-75 {
+    animation-delay: 75ms;
+  }
+
+  &.delay-150 {
+    animation-delay: 150ms;
+  }
+}

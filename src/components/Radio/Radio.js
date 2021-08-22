@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import {ReactComponent as RadioOn} from "./radio_on.svg";
 import {ReactComponent as RadioOff} from "./radio_off.svg";
-import BaseToggle from "../BaseToggle/Toggle";
+import BaseToggle from "../BaseToggle/BaseToggle";
 
 const Radio = React.forwardRef((props, ref) => (
   <BaseToggle

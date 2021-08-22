@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import {ReactComponent as ToggleOn} from "./toggle_on.svg";
 import {ReactComponent as ToggleOff} from "./toggle_off.svg";
-import BaseToggle from "../BaseToggle/Toggle";
+import BaseToggle from "../BaseToggle/BaseToggle";
 
 const StarToggle = React.forwardRef((props, ref) => (
   <BaseToggle
