@@ -1,0 +1,77 @@
+.navbarRoot {
+  @apply relative bg-primary text-white;
+
+  &.top {
+    @apply fixed top-0 left-0 w-full;
+  }
+
+  &.bottom {
+    @apply fixed bottom-0 left-0 w-full;
+
+    .navbarContainer {
+      @apply flex-col-reverse lg:flex-row;
+    }
+
+    .navbarBurger {
+      @apply top-auto bottom-3;
+    }
+  }
+
+  &.isOpened {
+    .navbarMenu {
+      @apply block w-full lg:flex lg:w-auto;
+    }
+
+    &.top {
+      .navbarMenu {
+        @apply pb-4 lg:pb-0;
+      }
+    }
+
+    &.bottom {
+      .navbarMenu {
+        @apply pt-4 lg:pt-0;
+      }
+    }
+  }
+
+  .navbarContainer {
+    @apply container flex items-center h-auto lg:h-14 mx-auto justify-center lg:justify-start flex-col lg:flex-row;
+  }
+
+  .navbarBrand {
+    @apply flex space-x-2 items-center mr-4 py-2 lg:py-0;
+
+    .brandLogo {
+      @apply h-8 lg:h-10;
+    }
+
+    .brandName {
+      @apply text-lg;
+    }
+  }
+
+  .navbarMenu {
+    @apply hidden lg:flex h-full;
+
+    &.left {
+      @apply mr-auto;
+    }
+
+    &.center {
+      @apply mx-auto;
+    }
+
+    &.right {
+      @apply ml-auto;
+    }
+  }
+
+  .navbarItem {
+    @apply flex items-center px-4 py-2 lg:py-0 cursor-pointer hover:bg-white hover:bg-opacity-10;
+  }
+
+  .navbarBurger {
+    @apply absolute top-3 left-4 w-6 h-6 lg:hidden fill-current cursor-pointer;
+  }
+}

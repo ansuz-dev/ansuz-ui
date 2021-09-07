@@ -1,0 +1,37 @@
+.tag {
+  @apply inline-flex justify-center items-center rounded;
+
+  &.sm {
+    @apply h-6 text-xs px-3;
+  }
+
+  &.md {
+    @apply h-8 text-sm px-4;
+  }
+
+  &.lg {
+    @apply h-10 text-sm px-6;
+  }
+
+  &.outlined {
+    @apply border;
+
+    &.primary {
+      @apply text-primary border-primary;
+    }
+
+    &.secondary {
+      @apply text-secondary border-secondary;
+    }
+  }
+
+  &.filled {
+    &.primary {
+      @apply text-white bg-primary;
+    }
+
+    &.secondary {
+      @apply text-white bg-secondary;
+    }
+  }
+}

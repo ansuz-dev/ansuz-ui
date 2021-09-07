@@ -9,10 +9,19 @@ import Tooltip from "./components/Tooltip/Tooltip";
 
 import Button from "./components/Button/Button";
 import Loading from "./components/Loading/Loading";
+import Avatar from "./components/Avatar/Avatar";
+
+import Navbar from "./components/Navbar/Navbar";
+import NavbarBrand from "./components/Navbar/NavbarBrand";
+import NavbarMenu from "./components/Navbar/NavbarMenu";
+import NavbarItem from "./components/Navbar/NavbarItem";
+
+import Box from "./components/Box/Box";
+import Tag from "./components/Tag/Tag";
 
 function App() {
   return (
-    <div className="container mx-auto py-8 space-y-6">
+    <div className="container mx-auto py-20 space-y-6">
       <div className="space-x-4">
         <Tooltip
           title="It is a long established fact that a reader."
@@ -149,6 +158,88 @@ function App() {
       <div className="space-x-4">
         <Loading />
         <Loading color="secondary" />
+      </div>
+
+      <div className="space-x-4">
+        <Avatar size="sm" src="https://i.pravatar.cc/32" alt="John Doe" />
+        <Avatar size="md" src="https://i.pravatar.cc/64" alt="John Doe" />
+        <Avatar size="lg" src="https://i.pravatar.cc/128" alt="John Doe" />
+        <Avatar size="sm" alt="John Doe" />
+        <Avatar size="md" alt="John Doe" />
+        <Avatar size="lg" alt="John Doe" />
+      </div>
+
+      <div className="space-x-4">
+        <Avatar size="sm" variant="rounded" src="https://i.pravatar.cc/32" alt="John Doe" />
+        <Avatar size="md" variant="rounded" src="https://i.pravatar.cc/64" alt="John Doe" />
+        <Avatar size="lg" variant="rounded" src="https://i.pravatar.cc/128" alt="John Doe" />
+        <Avatar variant="rounded" alt="John Doe" />
+      </div>
+
+      <div className="space-x-4">
+        <Avatar size="sm" variant="square" src="https://i.pravatar.cc/32" alt="John Doe" />
+        <Avatar size="md" variant="square" src="https://i.pravatar.cc/64" alt="John Doe" />
+        <Avatar size="lg" variant="square" src="https://i.pravatar.cc/128" alt="John Doe" />
+        <Avatar size="lg" variant="square" src="https://badurl.com/avatar" alt="John Doe" />
+        <Avatar variant="square" alt="John Doe" />
+      </div>
+
+      <div>
+        <Navbar>
+          <NavbarBrand
+            showName
+            logo="https://picsum.photos/64/48"
+            name="Ansuz Development"
+          />
+          <NavbarMenu align="center">
+            <NavbarItem label="Home" />
+            <NavbarItem label="About us" />
+            <NavbarItem label="Contact" />
+          </NavbarMenu>
+        </Navbar>
+
+        <Navbar position="top">
+          <NavbarBrand
+            logo="https://picsum.photos/64/48"
+            name="Ansuz Development"
+          />
+          <NavbarMenu align="left">
+            <NavbarItem label="Home" />
+            <NavbarItem label="About us" />
+            <NavbarItem label="Contact" />
+          </NavbarMenu>
+        </Navbar>
+
+        <Navbar position="bottom">
+          <NavbarBrand
+            name="Ansuz Development"
+          />
+          <NavbarMenu align="right">
+            <NavbarItem label="Home" />
+            <NavbarItem label="About us" />
+            <NavbarItem label="Contact" />
+          </NavbarMenu>
+        </Navbar>
+      </div>
+
+      <div>
+        <Box>
+          <div className="space-x-2">
+            <Tag variant="filled" color="primary" size="sm" label="Tag" />
+            <Tag variant="filled" color="primary" size="md" label="Tag" />
+            <Tag variant="filled" color="primary" size="lg" label="Tag" />
+            <Tag variant="filled" color="secondary" size="sm" label="Tag" />
+            <Tag variant="filled" color="secondary" size="md" label="Tag" />
+            <Tag variant="filled" color="secondary" size="lg" label="Tag" />
+            <Tag variant="outlined" color="primary" size="sm" label="Tag" />
+            <Tag variant="outlined" color="primary" size="md" label="Tag" />
+            <Tag variant="outlined" color="primary" size="lg" label="Tag" />
+            <Tag variant="outlined" color="secondary" size="sm" label="Tag" />
+            <Tag variant="outlined" color="secondary" size="md" label="Tag" />
+            <Tag variant="outlined" color="secondary" size="lg" label="Tag" />
+          </div>
+
+        </Box>
       </div>
     </div>
   );

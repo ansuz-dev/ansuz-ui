@@ -18,14 +18,14 @@
   }
 
   .toggle {
-    @apply relative inline-flex w-5 h-5;
+    @apply relative inline-flex w-6 h-6;
 
     input {
       @apply hidden;
     }
 
     .toggleOff, .toggleOn {
-      @apply absolute top-0 left-0 w-5 h-5 fill-current;
+      @apply absolute top-0 left-0 w-6 h-6 fill-current;
     }
 
     input + .toggleOff {

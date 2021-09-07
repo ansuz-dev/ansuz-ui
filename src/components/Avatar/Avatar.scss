@@ -1,0 +1,39 @@
+.avatarContainer {
+  @apply inline-flex justify-center items-center overflow-hidden bg-primary align-middle;
+
+  .avatarText {
+    @apply uppercase text-white;
+  }
+
+  &.sm {
+    @apply w-8 h-8;
+
+    .avatarText {
+      @apply text-sm;
+    }
+  }
+
+  &.md {
+    @apply w-16 h-16;
+
+    .avatarText {
+      @apply text-2xl;
+    }
+  }
+
+  &.lg {
+    @apply w-32 h-32;
+
+    .avatarText {
+      @apply text-8xl;
+    }
+  }
+
+  &.circle {
+    @apply rounded-full;
+  }
+
+  &.rectangle {
+    @apply rounded-none;
+  }
+}
