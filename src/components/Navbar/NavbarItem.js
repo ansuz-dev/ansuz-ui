@@ -7,11 +7,9 @@ import "./Navbar.scss";
 const NavbarItem = props => {
   const {
     label,
-    component,
+    component: Component,
     ...rest
   } = props;
-
-  const Component = component;
 
   const itemClasses = cls({
     navbarItem: true,

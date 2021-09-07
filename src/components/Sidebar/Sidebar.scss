@@ -1,0 +1,73 @@
+.sidebarRoot {
+  @apply sticky top-0 bg-primary w-14 h-screen text-white;
+
+  &.left {
+    .sidebarBurger {
+      @apply left-4;
+    }
+  }
+
+  &.right {
+    .sidebarBurger {
+      @apply right-4;
+    }
+
+    &.isOpened {
+      .sidebarItem {
+        @apply flex-row-reverse space-x-reverse;
+      }
+    }
+  }
+
+  &.isOpened {
+    @apply w-64;
+
+    .sidebarItem {
+      @apply flex items-center;
+
+      .sidebarItemLabel {
+        @apply block;
+      }
+    }
+  }
+
+  .sidebarBurger {
+    @apply absolute top-3 lg:top-4 w-6 h-6 fill-current cursor-pointer;
+  }
+
+  .sidebarContainer {
+    @apply flex flex-1 h-full;
+  }
+
+  .sidebarMenu {
+    @apply flex flex-1 flex-col mt-12 lg:mt-14 overflow-y-auto;
+
+    &.top {
+      @apply items-start;
+    }
+
+    &.center {
+      @apply items-center;
+    }
+
+    &.bottom {
+      @apply items-end;
+    }
+  }
+
+  .sidebarItem {
+    @apply py-3 px-4 w-full cursor-pointer hover:bg-white hover:bg-opacity-10 space-x-3;
+
+    .sidebarItemIconContainer {
+      @apply w-6 h-6 text-center font-bold;
+    }
+
+    .sidebarItemIcon {
+      @apply w-6 h-6 fill-current;
+    }
+
+    .sidebarItemLabel {
+      @apply hidden;
+    }
+  }
+}

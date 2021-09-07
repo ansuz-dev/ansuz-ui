@@ -2,11 +2,11 @@
   @apply relative bg-primary text-white;
 
   &.top {
-    @apply fixed top-0 left-0 w-full;
+    @apply sticky top-0 left-0 w-full z-10;
   }
 
   &.bottom {
-    @apply fixed bottom-0 left-0 w-full;
+    @apply sticky bottom-0 left-0 w-full z-10;
 
     .navbarContainer {
       @apply flex-col-reverse lg:flex-row;

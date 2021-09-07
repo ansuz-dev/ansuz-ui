@@ -45,7 +45,7 @@ Navbar.defaultProps = {
 };
 
 Navbar.propTypes = {
-  position: PropTypes.oneOf(["top"]),
+  position: PropTypes.oneOf(["top", "bottom"]),
   children: PropTypes.node.isRequired,
 };
 

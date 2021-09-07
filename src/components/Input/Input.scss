@@ -1,0 +1,113 @@
+
+.inputContainer {
+  @apply inline-block relative;
+
+  &.sm {
+    @apply h-8;
+
+    .startAdornment {
+      @apply w-4 h-4 top-2 left-3;
+    }
+
+    .endAdornment {
+      @apply w-4 h-4 top-2 right-3;
+    }
+
+    .adornment {
+      @apply w-4 h-4 fill-current;
+    }
+  }
+
+  &.md {
+    @apply h-10;
+
+    .startAdornment, .endAdornment {
+      @apply w-6 h-6 top-2;
+    }
+
+    .adornment {
+      @apply w-6 h-6 fill-current;
+    }
+  }
+
+  &.lg {
+    @apply h-12;
+
+    .startAdornment, .endAdornment {
+      @apply w-6 h-6 top-3;
+    }
+
+    .adornment {
+      @apply w-6 h-6 fill-current;
+    }
+  }
+
+  &.error {
+    @apply text-red-500;
+
+    .hint {
+      @apply text-red-500;
+    }
+  }
+
+  .startAdornment {
+    @apply absolute left-2;
+  }
+
+  .endAdornment {
+    @apply absolute right-2;
+  }
+
+  .hint {
+    @apply text-xs text-gray-500 pl-2;
+  }
+
+  .input {
+    @apply placeholder-gray-400 bg-gray-50 border border-gray-300 rounded px-2;
+    @apply focus:outline-none focus:border-primary;
+
+    &.sm {
+      @apply h-8 text-xs;
+
+      &.hasStartAdornment {
+        @apply pl-10;
+      }
+
+      &.hasEndAdornment {
+        @apply pr-10;
+      }
+    }
+
+    &.md {
+      @apply h-10 text-sm;
+
+      &.hasStartAdornment {
+        @apply pl-10;
+      }
+
+      &.hasEndAdornment {
+        @apply pr-10;
+      }
+    }
+
+    &.lg {
+      @apply h-12 text-base;
+
+      &.hasStartAdornment {
+        @apply pl-10;
+      }
+
+      &.hasEndAdornment {
+        @apply pr-10;
+      }
+    }
+
+    &.readOnly {
+      @apply cursor-default;
+    }
+
+    &.error {
+      @apply text-red-500 bg-red-100 border-red-500 focus:border-red-500 placeholder-red-400 #{!important};
+    }
+  }
+}
